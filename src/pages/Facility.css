@@ -1,0 +1,45 @@
+/* src/pages/Facility.css */
+.fac-split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.fac-reverse { direction: rtl; }
+.fac-reverse > * { direction: ltr; }
+.fac-main-img {
+  width: 100%; height: 420px; object-fit: cover;
+  border-radius: var(--radius-lg); box-shadow: var(--shadow-xl);
+  border: 4px solid #fff; outline: 1px solid var(--border);
+}
+.fac-para { font-size: 0.97rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 16px; }
+.fac-badges { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+.fac-badge {
+  font-size: 0.8rem; color: var(--primary);
+  border: 1px solid var(--primary-light); background: var(--primary-xlt); padding: 7px 14px; border-radius: 5px;
+}
+.panel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
+.panel-feature-item { display: flex; align-items: flex-start; gap: 8px; font-size: 0.83rem; color: var(--text-muted); line-height: 1.4; }
+.pfi-check { color: var(--primary); font-weight: 700; flex-shrink: 0; }
+
+.panel-section { background: var(--bg-soft); }
+.assemblies-section { background: var(--bg-section); }
+.asm-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 22px; }
+.asm-card {
+  background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg);
+  overflow: hidden; transition: transform 0.28s, box-shadow 0.28s, border-color 0.28s; box-shadow: var(--shadow-sm);
+}
+.asm-card:hover { border-color: var(--accent); transform: translateY(-5px); box-shadow: var(--shadow-xl); }
+.asm-img-wrap { height: 140px; overflow: hidden; }
+.asm-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.asm-card:hover .asm-img-wrap img { transform: scale(1.08); }
+.asm-body { padding: 16px 16px 20px; }
+.asm-icon { font-size: 1.6rem; display: block; margin-bottom: 8px; }
+.asm-title { font-family: 'Fraunces', Georgia, serif; font-size: 0.97rem; font-weight: 700; color: var(--text); margin-bottom: 7px; }
+.asm-desc  { font-size: 0.8rem; color: var(--text-muted); line-height: 1.55; }
+
+@media (max-width: 900px) {
+  .fac-split { grid-template-columns: 1fr; gap: 36px; }
+  .fac-reverse { direction: ltr; }
+  .fac-main-img { height: 280px; }
+  .asm-grid { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 560px) {
+  .asm-grid { grid-template-columns: 1fr; }
+  .panel-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,212 @@
+/* src/pages/About.css */
+.about-intro { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: start; }
+.about-para { font-size: 0.97rem; color: var(--text-muted); line-height: 1.82; margin-bottom: 16px; }
+
+.company-card {
+  background: #fff; border: 1px solid var(--border); border-top: 4px solid var(--accent);
+  border-radius: 12px; padding: 30px; position: sticky; top: 80px; box-shadow: var(--shadow-md);
+}
+.cc-header { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+.cc-icon {
+  width: 48px; height: 48px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dim));
+  border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;
+}
+.cc-name { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.88rem; font-weight: 800; color: var(--text); letter-spacing: 0.06em; text-transform: uppercase; }
+.cc-sub  { font-family: 'Space Mono', monospace; font-size: 0.62rem; color: var(--primary); letter-spacing: 0.12em; }
+.cc-divider { border: none; border-top: 1px solid var(--border); margin: 0 0 18px; }
+.cc-stats { display: flex; flex-direction: column; gap: 13px; }
+.cc-stat { display: flex; align-items: center; gap: 10px; font-size: 0.875rem; color: var(--text-muted); }
+
+/* ── Chairman ── */
+.chairman-section { background: var(--primary-deep); }
+.chairman-section .section-tag::before { background: var(--accent); }
+.chairman-section .section-tag { color: var(--accent); }
+.chairman-section .section-title { color: #fff; }
+.chairman-section .section-title span { color: var(--accent); }
+.chairman-section .accent-bar { background: linear-gradient(90deg, var(--accent), rgba(255,255,255,0.4)); }
+
+.chairman-layout { display: grid; grid-template-columns: 340px 1fr; gap: 60px; align-items: start; }
+
+.chairman-photo-wrap { position: sticky; top: 80px; }
+.chairman-photo {
+  width: 100%; height: 380px; object-fit: cover; object-position: top center;
+  border-radius: 14px; border: 4px solid var(--accent);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+}
+.chairman-badge {
+  background: var(--accent); border-radius: 0 0 12px 12px;
+  padding: 16px 20px; text-align: center; margin-top: -4px;
+}
+.cb-name { font-family: 'Fraunces', Georgia, serif; font-size: 1.15rem; font-weight: 700; color: var(--primary-deep); }
+.cb-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.78rem; font-weight: 700; color: var(--primary-deep); opacity: 0.8; letter-spacing: 0.04em; margin-top: 2px; }
+.cb-company { font-family: 'Space Mono', monospace; font-size: 0.6rem; color: var(--primary); letter-spacing: 0.08em; margin-top: 2px; opacity: 0.7; }
+
+.chairman-message { padding-top: 10px; }
+.cm-quote-mark {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 6rem; color: var(--accent); line-height: 0.6; margin-bottom: 24px; display: block; opacity: 0.8;
+}
+.cm-text { font-size: 1.02rem; color: rgba(255,255,255,0.8); line-height: 1.85; margin-bottom: 20px; }
+.cm-signature {
+  margin-top: 32px; padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+.cms-name {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.2rem; font-weight: 700; color: var(--accent); font-style: italic;
+}
+.cms-role { font-size: 0.82rem; color: rgba(255,255,255,0.5); margin-top: 4px; }
+
+/* ── Vision & Mission ── */
+.vm-section { background: var(--bg-soft); }
+.vm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.vm-card {
+  background: #fff; border-radius: var(--radius-lg); padding: 40px 36px;
+  border: 1px solid var(--border); box-shadow: var(--shadow-md);
+  position: relative; overflow: hidden;
+}
+.vm-vision { border-top: 5px solid var(--primary); }
+.vm-mission { border-top: 5px solid var(--accent); }
+.vm-card::before {
+  content: '';
+  position: absolute; top: -40px; right: -40px;
+  width: 140px; height: 140px; border-radius: 50%;
+  opacity: 0.04;
+}
+.vm-vision::before { background: var(--primary); }
+.vm-mission::before { background: var(--accent); }
+
+.vm-icon { font-size: 2.4rem; display: block; margin-bottom: 16px; }
+.vm-heading {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 1.6rem; font-weight: 700; color: var(--text); margin-bottom: 16px;
+}
+.vm-vision .vm-heading { color: var(--primary); }
+.vm-mission .vm-heading { color: var(--accent-dim); }
+.vm-text { font-size: 0.97rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 24px; }
+.vm-list { display: flex; flex-direction: column; gap: 10px; }
+.vm-list li {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 0.875rem; color: var(--text); font-weight: 500;
+  padding: 8px 0; border-bottom: 1px solid var(--border);
+}
+.vm-list li span { color: var(--accent-dim); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+/* Values */
+.about-values-section { background: #fff; }
+.values-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 22px; }
+.value-card {
+  background: var(--bg-soft); border: 1px solid var(--border); border-radius: var(--radius-lg);
+  overflow: hidden; transition: transform 0.28s, box-shadow 0.28s, border-color 0.28s;
+  box-shadow: var(--shadow-sm);
+}
+.value-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-xl); border-color: var(--primary); }
+.value-card .card-img-sm { transition: transform 0.4s ease; }
+.value-card:hover .card-img-sm { transform: scale(1.06); }
+.value-body { padding: 18px 16px 22px; }
+.value-icon { font-size: 1.8rem; display: block; margin-bottom: 10px; }
+.value-title { font-family: 'Fraunces', Georgia, serif; font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+.value-desc { font-size: 0.83rem; color: var(--text-muted); line-height: 1.62; }
+
+/* Team */
+.team-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
+.team-card {
+  background: #fff; border: 1px solid var(--border); border-left: 5px solid var(--accent);
+  border-radius: var(--radius); padding: 24px 20px; display: flex; flex-direction: column; gap: 8px;
+  box-shadow: var(--shadow-sm); transition: box-shadow 0.2s, transform 0.2s;
+}
+.team-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.team-count { font-family: 'Fraunces', Georgia, serif; font-size: 2.6rem; font-weight: 700; color: var(--primary); line-height: 1; }
+.team-role  { font-size: 0.875rem; color: var(--text-muted); }
+
+/* HSE */
+.hse-section { background: var(--bg-section); }
+.hse-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: center; }
+.hse-badges { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.hse-badge {
+  background: #fff; border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 14px 16px; font-size: 0.875rem; color: var(--text);
+  display: flex; align-items: center; gap: 10px;
+  transition: border-color 0.2s, box-shadow 0.2s; box-shadow: var(--shadow-sm);
+}
+.hse-badge:hover { border-color: var(--primary); box-shadow: var(--shadow-md); }
+.hse-check { color: var(--primary); font-weight: 700; font-size: 1rem; }
+
+@media (max-width: 1050px) { .chairman-layout { grid-template-columns: 280px 1fr; gap: 40px; } }
+@media (max-width: 900px) {
+  .about-intro, .hse-inner { grid-template-columns: 1fr; }
+  .chairman-layout { grid-template-columns: 1fr; }
+  .chairman-photo-wrap { position: static; max-width: 320px; margin: 0 auto; }
+  .values-grid, .team-grid { grid-template-columns: repeat(2,1fr); }
+  .vm-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .values-grid, .team-grid { grid-template-columns: 1fr; }
+  .hse-badges { grid-template-columns: 1fr; }
+}
+
+/* ── About Company Image ── */
+.about-img-wrap {
+  position: sticky;
+  top: 80px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 4px solid #fff;
+  outline: 1px solid var(--border);
+}
+
+.about-company-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.about-img-wrap:hover .about-company-img {
+  transform: scale(1.04);
+}
+
+/* ── Floating Badge Over Image ── */
+.about-img-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 18px 20px;
+  background: linear-gradient(to top, rgba(11,31,79,0.92) 0%, transparent 100%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.aib-icon {
+  font-size: 1.6rem;
+  width: 40px;
+  height: 40px;
+  background: var(--accent);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.aib-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.aib-sub {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  margin-top: 2px;
+}

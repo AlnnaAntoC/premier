@@ -1,0 +1,87 @@
+/* src/components/Header.css */
+.site-header {
+  background: var(--primary-deep);
+  border-bottom: 3px solid var(--accent);
+  position: relative;
+  z-index: 200;
+}
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.header-logo-img {
+  height: 52px;       /* adjust up or down to fit your logo */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+.logo-icon {
+  width: 48px; height: 48px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dim));
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(245,184,0,0.45);
+}
+.logo-gear {
+  font-size: 1.6rem;
+  animation: spin 8s linear infinite;
+  display: inline-block;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+.logo-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.logo-sub {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.58rem;
+  color: var(--accent);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.header-contact-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.hc-divider {
+  width: 1px; height: 36px;
+  background: rgba(255,255,255,0.12);
+}
+.hc-item { display: flex; align-items: center; gap: 10px; }
+.hc-icon { font-size: 1rem; color: var(--accent); }
+.hc-item div { display: flex; flex-direction: column; line-height: 1.2; }
+.hc-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.58rem;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.hc-value {
+  font-size: 0.85rem;
+  color: #fff;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .header-contact-bar { display: none; }
+  .header-inner { justify-content: center; }
+}
